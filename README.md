@@ -5,4 +5,4 @@ This is a repository containing the corrections for the labs.
 
 ## Author
 
-Gonzalo Etse Kudinov <gonzaloetjo@gmail.com.com>
+Gonzalo Etse <gonzaloetjo@gmail.com.com>
