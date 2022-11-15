@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-empty-dir
+  labels:
+    app: nginx-empty-dir
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-empty-dir
+  template:
+    metadata:
+      labels:
+        app: nginx-empty-dir
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+        ports:
+          - containerPort: 80
+            name: "http-server"
+        volumeMounts:
+          - mountPath: /cache
+            name: cache-volume
+      volumes:
+        - name: cache-volume
+          emptyDir: {} 
